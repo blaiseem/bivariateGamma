@@ -49,7 +49,6 @@ def costFunction(guess, params):
             (EV - H1*H2 + gamma) / np.sqrt(alpha1*alpha2) - rho
         )
         
-
     return F
 
 def generateSamples(mu=[1,1],sigma=[1,1],rho=0,size=10000,glPoints=25):
@@ -76,7 +75,6 @@ def generateSamples(mu=[1,1],sigma=[1,1],rho=0,size=10000,glPoints=25):
         Each is an array of length size.
         The mean and standard deviation should match the specified inputs.
         The correlation between the elements should match the input correlation.
-    
     """
     #converting mean and standard deviation to theta and k values.
     #assumes gamma distribution of the form f(x) = (1/(Gamma(k)*theta^k))*x^(k-1)*exp(-x/theta)
@@ -89,7 +87,6 @@ def generateSamples(mu=[1,1],sigma=[1,1],rho=0,size=10000,glPoints=25):
         mu[0]/theta[0],
         mu[1]/theta[1]
     ]
-    
     
     #generating gauss legendre integration params
     b, a = 1, 0
